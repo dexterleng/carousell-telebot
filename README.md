@@ -24,6 +24,12 @@ pip install -r requirements.txt
 python setup.py
 ```
 
+3. Talk to your bot. Listen to a keyword with the command:
+
+```
+/listen <keyword>
+```
+
 ## `credentials.json` format:
 
 ```

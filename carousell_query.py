@@ -25,14 +25,6 @@ def parse_products(html_str):
   products_browse_ids = get_products_browse_ids(html_str)
   return list(map(lambda id: product_by_id[id], products_browse_ids))
 
-# diffing to remove products the telegram user has been alerted of
-def remove_sent_products(products, last_sent_product_id):
-  for i in range(len(products)):
-    product = products[i]
-    if product['id'] == last_sent_product_id:
-      return products[:i]
-  return products
-
 # returns product_id -> product dictionary
 def get_products_map(html_str):
   start_index = html_str.find('"productsMap":{')

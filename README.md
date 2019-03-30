@@ -8,7 +8,9 @@ Yes.
 
 ## How does it work?
 
-Carousell uses Fluxible for server-side rendering (SSR). This is very nice because we can parse the React props in the `<script>` tag to JSON.
+Carousell uses Fluxible for server-side rendering (SSR). This is very nice because we can parse the React props in the `<script>` tag as JSON to a Python dictionary.
+
+The nested objects that this project need have the keys of `"productsMap"` and `"PRODUCTS_BROWSE"`. They happen to be valid JSON (no functions as values) so we can treat it as such and use the `json.loads()` function.
 
 ## How do I run this myself?
 
